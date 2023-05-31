@@ -11,7 +11,7 @@ project_info = {
         "email": "bobson278@gmail.com"
     },
     "Links":{
-        "github": "Em breve",
+        "github": "https://github.com/Bobson360/youtube-downloader",
         "Linkedin": "https://www.linkedin.com/in/robson-rodrigues-2a973a165/"
     },
     "Description": [

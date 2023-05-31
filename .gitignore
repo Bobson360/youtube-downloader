@@ -4,3 +4,4 @@
 download_log.txt
 playlist.spec
 __pycache__/
+/build

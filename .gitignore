@@ -1,0 +1,6 @@
+/audio
+/video
+/venv
+download_log.txt
+playlist.spec
+__pycache__/

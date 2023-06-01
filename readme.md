@@ -59,4 +59,4 @@ Este código é destinado para fins educacionais e pessoais apenas, sem intenç�
 
 Release:
 
-[Baixar win64](https://github.com/Bobson360/youtube-downloader/raw/master/release/youtube%20downloader%200.1.1.zip)
+[Baixar win64](https://github.com/Bobson360/youtube-downloader/raw/master/release/youtube_downloader%200.1.2.zip)

@@ -1,0 +1,36 @@
+root - ERROR - Error occurred!
+Traceback (most recent call last):
+  File "C:\projects\python\youtube\playlist.py", line 101, in init
+    folder_video = os.path.join('video', playlist.title)
+                                         ^^^^^^^^^^^^^^
+  File "C:\projects\python\youtube\venv\Lib\site-packages\pytube\contrib\playlist.py", line 351, in title
+    return self.sidebar_info[0]['playlistSidebarPrimaryInfoRenderer'][
+           ^^^^^^^^^^^^^^^^^
+  File "C:\projects\python\youtube\venv\Lib\site-packages\pytube\contrib\playlist.py", line 93, in sidebar_info
+    self._sidebar_info = self.initial_data['sidebar'][
+                         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'sidebar'
+root - ERROR - Error occurred!
+Traceback (most recent call last):
+  File "C:\projects\python\youtube\playlist.py", line 101, in init
+    folder_video = os.path.join('video', playlist.title)
+                                         ^^^^^^^^^^^^^^
+  File "C:\projects\python\youtube\venv\Lib\site-packages\pytube\contrib\playlist.py", line 351, in title
+    return self.sidebar_info[0]['playlistSidebarPrimaryInfoRenderer'][
+           ^^^^^^^^^^^^^^^^^
+  File "C:\projects\python\youtube\venv\Lib\site-packages\pytube\contrib\playlist.py", line 93, in sidebar_info
+    self._sidebar_info = self.initial_data['sidebar'][
+                         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'sidebar'
+root - ERROR - Error occurred!
+Traceback (most recent call last):
+  File "C:\projects\python\youtube\playlist.py", line 101, in init
+    folder_video = os.path.join('video', playlist.title)
+                                         ^^^^^^^^^^^^^^
+  File "C:\projects\python\youtube\venv\Lib\site-packages\pytube\contrib\playlist.py", line 351, in title
+    return self.sidebar_info[0]['playlistSidebarPrimaryInfoRenderer'][
+           ^^^^^^^^^^^^^^^^^
+  File "C:\projects\python\youtube\venv\Lib\site-packages\pytube\contrib\playlist.py", line 93, in sidebar_info
+    self._sidebar_info = self.initial_data['sidebar'][
+                         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'sidebar'

@@ -57,4 +57,6 @@ Para instalar as bibliotecas necessárias, use o seguinte comando: pip install `
 
 Este código é destinado para fins educacionais e pessoais apenas, sem intenção de causar danos. Baixar conteúdo protegido por direitos autorais pode ser ilegal em sua jurisdição. Este código não incentiva ou endossa tal comportamento, e não pode ser usado para tais fins. O autor não é responsável por qualquer uso ou mau uso deste código.
 
-Release: [Baixar arquivo](https://github.com/Bobson360/youtube-downloader/raw/master/release/youtube%20downloader%200.1.1.zip)
+Release:
+
+[Baixar win64](https://github.com/Bobson360/youtube-downloader/raw/master/release/youtube%20downloader%200.1.1.zip)

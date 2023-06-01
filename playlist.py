@@ -1,8 +1,24 @@
+import logging
 import os
 from pytube import YouTube, Playlist
 from moviepy.editor import AudioFileClip
 import re
 import pprint
+
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+
+# Create a file handler
+handler = logging.FileHandler('app.log')
+handler.setLevel(logging.DEBUG)
+
+# Create a logging format
+formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+
+# Add the handler to the logger
+logger.addHandler(handler)
+
 
 project_info = {
     "author": "Robson Rodrigues",
@@ -76,29 +92,52 @@ def download_video_and_audio_if_not_exists(video, folder_video, folder_audio, op
         else:
             print(f"Áudio já existe no diretório: {filename_audio}")
 
+def init():
+    try:
+        PLAYLIST_URL = input("Insira a URL da playlist que deseja baixar e aperte ENTER: ")
+        playlist = Playlist(PLAYLIST_URL)
 
+        # Creates folders with the name of the playlist for video and audio
+        folder_video = os.path.join('video', playlist.title)
+        folder_audio = os.path.join('audio', playlist.title)
 
-PLAYLIST_URL = input("Insira a URL da playlist que deseja baixar e aperte ENTER: ")
-playlist = Playlist(PLAYLIST_URL)
+        if not os.path.exists(folder_video):
+            os.makedirs(folder_video)
+        if not os.path.exists(folder_audio):
+            os.makedirs(folder_audio)
 
-# Creates folders with the name of the playlist for video and audio
-folder_video = os.path.join('video', playlist.title)
-folder_audio = os.path.join('audio', playlist.title)
+        download_choice = download_option()
 
-if not os.path.exists(folder_video):
-    os.makedirs(folder_video)
-if not os.path.exists(folder_audio):
-    os.makedirs(folder_audio)
+        for url in playlist.video_urls:
+            video = YouTube(url)
+            download_video_and_audio_if_not_exists(video, folder_video, folder_audio, download_choice)
 
-download_choice = download_option()
+        # Log the total downloaded files and total files in directory
+        with open('download_log.txt', 'a', encoding='utf-8') as log_file:
+            total_files_count_video = len([name for name in os.listdir(folder_video) if os.path.isfile(os.path.join(folder_video, name))])
+            total_files_count_audio = len([name for name in os.listdir(folder_audio) if os.path.isfile(os.path.join(folder_audio, name))])
+            log_file.write(f'Total files in video directory: {total_files_count_video}\n')
+            log_file.write(f'Total files in audio directory: {total_files_count_audio}\n')
 
-for url in playlist.video_urls:
-    video = YouTube(url)
-    download_video_and_audio_if_not_exists(video, folder_video, folder_audio, download_choice)
+    except KeyError as e:
+        if 'sidebar' in str(e):
+            print('\nOcorreu um erro ao processar a playlist.\n'
+                  + '\nParece que a playlist que está tentando baixar não está acessivel.' 
+                  + '\nIsso pode ocorrer por dois motivos conhecidos:'
+                  + '\n1º - a playlist está com visibilidade particular (mude a visibilidade para pública)'
+                  + '\n2º - a playlist não existe.'
+                  + '\n\nVerifique e tente novamente.\n')
+            logger.exception("Error occurred!")
+            user_input = input("Pressione 'c' para tentar novamente ou qualquer outra tecla para encerrar: ")
+            if user_input.lower() != 'c':
+                exit()
+            else:
+                init()
 
-# Log the total downloaded files and total files in directory
-with open('download_log.txt', 'a', encoding='utf-8') as log_file:
-    total_files_count_video = len([name for name in os.listdir(folder_video) if os.path.isfile(os.path.join(folder_video, name))])
-    total_files_count_audio = len([name for name in os.listdir(folder_audio) if os.path.isfile(os.path.join(folder_audio, name))])
-    log_file.write(f'Total files in video directory: {total_files_count_video}\n')
-    log_file.write(f'Total files in audio directory: {total_files_count_audio}\n')
+    except Exception as e:
+        logger.exception("Unexpected error occurred!")
+        user_input = input("Um erro inesperado ocorreu. Pressione 'c' para continuar ou qualquer outra tecla para encerrar: ")
+        if user_input.lower() != 'c':
+            exit()
+
+init()

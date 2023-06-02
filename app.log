@@ -1,36 +1,121 @@
 root - ERROR - Error occurred!
 Traceback (most recent call last):
-  File "C:\projects\python\youtube\playlist.py", line 101, in init
-    folder_video = os.path.join('video', playlist.title)
-                                         ^^^^^^^^^^^^^^
-  File "C:\projects\python\youtube\venv\Lib\site-packages\pytube\contrib\playlist.py", line 351, in title
-    return self.sidebar_info[0]['playlistSidebarPrimaryInfoRenderer'][
-           ^^^^^^^^^^^^^^^^^
-  File "C:\projects\python\youtube\venv\Lib\site-packages\pytube\contrib\playlist.py", line 93, in sidebar_info
-    self._sidebar_info = self.initial_data['sidebar'][
-                         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
-KeyError: 'sidebar'
+  File "C:\projects\python\youtube\playlist.py", line 103, in isPlaylist
+    raise
+RuntimeError: No active exception to reraise
 root - ERROR - Error occurred!
 Traceback (most recent call last):
-  File "C:\projects\python\youtube\playlist.py", line 101, in init
-    folder_video = os.path.join('video', playlist.title)
-                                         ^^^^^^^^^^^^^^
-  File "C:\projects\python\youtube\venv\Lib\site-packages\pytube\contrib\playlist.py", line 351, in title
-    return self.sidebar_info[0]['playlistSidebarPrimaryInfoRenderer'][
-           ^^^^^^^^^^^^^^^^^
-  File "C:\projects\python\youtube\venv\Lib\site-packages\pytube\contrib\playlist.py", line 93, in sidebar_info
-    self._sidebar_info = self.initial_data['sidebar'][
-                         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
-KeyError: 'sidebar'
+  File "C:\projects\python\youtube\playlist.py", line 103, in isPlaylist
+    raise
+RuntimeError: No active exception to reraise
 root - ERROR - Error occurred!
 Traceback (most recent call last):
-  File "C:\projects\python\youtube\playlist.py", line 101, in init
-    folder_video = os.path.join('video', playlist.title)
-                                         ^^^^^^^^^^^^^^
-  File "C:\projects\python\youtube\venv\Lib\site-packages\pytube\contrib\playlist.py", line 351, in title
-    return self.sidebar_info[0]['playlistSidebarPrimaryInfoRenderer'][
-           ^^^^^^^^^^^^^^^^^
-  File "C:\projects\python\youtube\venv\Lib\site-packages\pytube\contrib\playlist.py", line 93, in sidebar_info
-    self._sidebar_info = self.initial_data['sidebar'][
-                         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
-KeyError: 'sidebar'
+  File "C:\projects\python\youtube\playlist.py", line 103, in isPlaylist
+    raise
+RuntimeError: No active exception to reraise
+root - ERROR - Error occurred!
+Traceback (most recent call last):
+  File "C:\projects\python\youtube\playlist.py", line 103, in isPlaylist
+    raise
+RuntimeError: No active exception to reraise
+root - ERROR - Error occurred!
+Traceback (most recent call last):
+  File "C:\projects\python\youtube\playlist.py", line 103, in isPlaylist
+    raise
+RuntimeError: No active exception to reraise
+root - ERROR - Error occurred!
+Traceback (most recent call last):
+  File "C:\projects\python\youtube\playlist.py", line 103, in isPlaylist
+    raise
+RuntimeError: No active exception to reraise
+root - ERROR - Error occurred!
+Traceback (most recent call last):
+  File "C:\projects\python\youtube\playlist.py", line 103, in isPlaylist
+    raise
+RuntimeError: No active exception to reraise
+root - ERROR - Error occurred!
+Traceback (most recent call last):
+  File "C:\projects\python\youtube\playlist.py", line 103, in isPlaylist
+    raise
+RuntimeError: No active exception to reraise
+pytube.helpers - DEBUG - matched regex search: (?:v=|\/)([0-9A-Za-z_-]{11}).*
+pytube.extract - DEBUG - applying descrambler
+pytube.extract - DEBUG - finding initial function name
+pytube.extract - DEBUG - Pattern failed: ytplayer\.config\s*=\s*
+pytube.extract - DEBUG - Could not parse object.
+pytube.extract - DEBUG - finished regex search, matched: (/s/player/[\w\d]+/[\w\d_/.]+/base\.js)
+pytube.cipher - DEBUG - finding initial function name
+pytube.cipher - DEBUG - finished regex search, matched: (?P<sig>[a-zA-Z0-9$]+)\s*=\s*function\(\s*a\s*\)\s*{\s*a\s*=\s*a\.split\(\s*""\s*\)
+pytube.cipher - DEBUG - getting transform plan
+pytube.helpers - DEBUG - matched regex search: wsa=function\(\w\){[a-z=\.\(\"\)]*;(.*);(?:.+)}
+pytube.cipher - DEBUG - getting transform object
+pytube.cipher - DEBUG - Finding throttling function name
+pytube.cipher - DEBUG - finished regex search, matched: a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&\s*\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)
+pytube.cipher - DEBUG - Finding throttling function name
+pytube.cipher - DEBUG - finished regex search, matched: a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&\s*\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.helpers - DEBUG - matched regex search: (?:v=|\/)([0-9A-Za-z_-]{11}).*
+pytube.extract - DEBUG - applying descrambler
+pytube.extract - DEBUG - finding initial function name
+pytube.extract - DEBUG - Pattern failed: ytplayer\.config\s*=\s*
+pytube.extract - DEBUG - Could not parse object.
+pytube.extract - DEBUG - finished regex search, matched: (/s/player/[\w\d]+/[\w\d_/.]+/base\.js)
+pytube.cipher - DEBUG - finding initial function name
+pytube.cipher - DEBUG - finished regex search, matched: (?P<sig>[a-zA-Z0-9$]+)\s*=\s*function\(\s*a\s*\)\s*{\s*a\s*=\s*a\.split\(\s*""\s*\)
+pytube.cipher - DEBUG - getting transform plan
+pytube.helpers - DEBUG - matched regex search: Isa=function\(\w\){[a-z=\.\(\"\)]*;(.*);(?:.+)}
+pytube.cipher - DEBUG - getting transform object
+pytube.cipher - DEBUG - Finding throttling function name
+pytube.cipher - DEBUG - finished regex search, matched: a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&\s*\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)
+pytube.cipher - DEBUG - Finding throttling function name
+pytube.cipher - DEBUG - finished regex search, matched: a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&\s*\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.helpers - DEBUG - matched regex search: (?:v=|\/)([0-9A-Za-z_-]{11}).*
+pytube.extract - DEBUG - applying descrambler
+pytube.extract - DEBUG - finding initial function name
+pytube.extract - DEBUG - Pattern failed: ytplayer\.config\s*=\s*
+pytube.extract - DEBUG - Could not parse object.
+pytube.extract - DEBUG - finished regex search, matched: (/s/player/[\w\d]+/[\w\d_/.]+/base\.js)
+pytube.cipher - DEBUG - finding initial function name
+pytube.cipher - DEBUG - finished regex search, matched: (?P<sig>[a-zA-Z0-9$]+)\s*=\s*function\(\s*a\s*\)\s*{\s*a\s*=\s*a\.split\(\s*""\s*\)
+pytube.cipher - DEBUG - getting transform plan
+pytube.helpers - DEBUG - matched regex search: Isa=function\(\w\){[a-z=\.\(\"\)]*;(.*);(?:.+)}
+pytube.cipher - DEBUG - getting transform object
+pytube.cipher - DEBUG - Finding throttling function name
+pytube.cipher - DEBUG - finished regex search, matched: a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&\s*\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)
+pytube.cipher - DEBUG - Finding throttling function name
+pytube.cipher - DEBUG - finished regex search, matched: a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&\s*\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher
+pytube.extract - DEBUG - signature found, skip decipher

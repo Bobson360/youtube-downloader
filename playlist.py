@@ -39,6 +39,7 @@ project_info = {
             
 }
 
+
 pprint.pprint(project_info, sort_dicts=False)
 print("\n\n")
 
@@ -92,9 +93,33 @@ def download_video_and_audio_if_not_exists(video, folder_video, folder_audio, op
         else:
             print(f"Áudio já existe no diretório: {filename_audio}")
 
-def init():
+def isPlaylist(URL):
     try:
-        PLAYLIST_URL = input("Insira a URL da playlist que deseja baixar e aperte ENTER: ")
+        if URL.find('playlist') > 0:
+            return True
+        elif URL.find('watch?v') > 0:
+            print("Você inseriu o link para um video, no momento a ferramenta ainda não tem o suporte para baixar video individualmente!")
+        else:
+            raise
+
+    except Exception as e:
+        print('\nVocê não inseriu um link invalido.\n'
+            + '\nVocê pode inserir dois tipos de link'
+            + '\n1º - Link de playlist - Baixa a lista de videos em diretorio de mesmo nome da playlist'
+            + '\n2º - Link de video - Baixa o video no diretorio video'
+            + '\n\nVerifique seu link e tente novamente.\n')
+        logger.exception("Error occurred!")
+        user_input = input("Pressione 'c' para tentar novamente ou qualquer outra tecla para encerrar: ")
+        if user_input.lower() != 'c':
+            exit()
+        else:
+            init()
+
+def init():
+        # PLAYLIST_URL = input("Insira a URL da playlist que deseja baixar e aperte ENTER: ")
+    PLAYLIST_URL = input("Insira a URL da playlist que deseja baixar e aperte ENTER: ")
+    isPlaylist(PLAYLIST_URL)
+    try:
         playlist = Playlist(PLAYLIST_URL)
 
         # Creates folders with the name of the playlist for video and audio
@@ -135,6 +160,7 @@ def init():
                 init()
 
     except Exception as e:
+        print("falhou")
         logger.exception("Unexpected error occurred!")
         user_input = input("Um erro inesperado ocorreu. Pressione 'c' para continuar ou qualquer outra tecla para encerrar: ")
         if user_input.lower() != 'c':
